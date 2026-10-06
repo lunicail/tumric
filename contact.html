@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>יצירת קשר | LUNICA</title>
+<link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700;800&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Heebo',sans-serif;background:#faf9f7;color:#1a1a1a;direction:rtl;min-height:100vh}
+a{text-decoration:none;color:inherit}
+
+.nav{
+  background:#fff;border-bottom:1px solid #e8e8e8;
+  padding:0 20px;height:52px;
+  display:flex;align-items:center;justify-content:space-between;
+  position:sticky;top:0;z-index:100;
+  box-shadow:0 1px 4px rgba(0,0,0,0.06);
+}
+.nav-logo{font-family:'Playfair Display',serif;font-size:20px;font-weight:700;color:#2a4a12}
+.nav-back{font-size:13px;font-weight:600;color:#2a4a12;display:flex;align-items:center;gap:6px}
+
+.hero{
+  background:linear-gradient(135deg,#2a4a12,#4a7a22);
+  color:#fff;text-align:center;padding:50px 24px 44px;
+}
+.hero h1{
+  font-family:'Playfair Display',serif;
+  font-size:clamp(26px,6vw,40px);margin-bottom:12px;
+}
+.hero p{font-size:15px;opacity:0.9;line-height:1.7}
+
+.contact-wrap{max-width:600px;margin:0 auto;padding:40px 20px 60px}
+
+.contact-card{
+  background:#fff;border-radius:18px;
+  padding:32px 28px;margin-bottom:20px;
+  box-shadow:0 2px 16px rgba(42,74,18,0.07);
+}
+.contact-card h2{
+  font-size:17px;font-weight:700;color:#2a4a12;
+  margin-bottom:18px;padding-bottom:12px;
+  border-bottom:1px solid #eee;
+}
+
+.contact-method{
+  display:flex;align-items:center;gap:16px;
+  padding:14px 0;border-bottom:1px solid #f5f5f5;
+}
+.contact-method:last-child{border-bottom:none}
+.contact-icon{font-size:26px;width:44px;text-align:center;flex-shrink:0}
+.contact-info{flex:1}
+.contact-info .label{font-size:11px;font-weight:600;color:#888;letter-spacing:0.5px;text-transform:uppercase;margin-bottom:2px}
+.contact-info .value{font-size:15px;font-weight:600;color:#222}
+.contact-info .sub{font-size:12px;color:#aaa;margin-top:2px}
+
+.form-card{
+  background:#fff;border-radius:18px;
+  padding:32px 28px;
+  box-shadow:0 2px 16px rgba(42,74,18,0.07);
+}
+.form-card h2{font-size:17px;font-weight:700;color:#2a4a12;margin-bottom:20px}
+.form-row{margin-bottom:16px}
+.form-row label{display:block;font-size:12px;font-weight:600;color:#555;margin-bottom:6px;letter-spacing:0.3px}
+.form-row input, .form-row textarea, .form-row select{
+  width:100%;
+  border:1.5px solid #ddd;border-radius:10px;
+  padding:12px 14px;font-size:14px;font-family:'Heebo',sans-serif;
+  color:#222;background:#fafafa;
+  outline:none;transition:border-color 0.2s;direction:rtl;
+}
+.form-row input:focus, .form-row textarea:focus, .form-row select:focus{
+  border-color:#2a4a12;background:#fff;
+}
+.form-row textarea{resize:vertical;min-height:110px}
+.submit-btn{
+  width:100%;background:#2a4a12;color:#fff;
+  border:none;border-radius:50px;
+  padding:15px 24px;font-size:15px;font-weight:700;
+  font-family:'Heebo',sans-serif;cursor:pointer;
+  transition:opacity 0.2s;margin-top:4px;
+}
+.submit-btn:hover{opacity:0.88}
+.submit-confirm{
+  display:none;text-align:center;padding:24px;
+  background:#f0f7ea;border-radius:12px;margin-top:16px;
+}
+.submit-confirm h3{color:#2a4a12;font-size:17px;margin-bottom:8px}
+.submit-confirm p{font-size:13px;color:#555;line-height:1.6}
+
+.hours-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:4px}
+.hour-box{background:#f7f7f5;border-radius:10px;padding:12px 14px;text-align:center}
+.hour-box .day{font-size:11px;color:#888;margin-bottom:4px}
+.hour-box .time{font-size:13px;font-weight:700;color:#2a4a12}
+
+footer{text-align:center;padding:24px;font-size:12px;color:#aaa;border-top:1px solid #eee;background:#fff}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <a class="nav-back" href="index.html">← חזרה לחנות</a>
+  <div class="nav-logo">LUNICA</div>
+  <div style="width:60px"></div>
+</nav>
+
+<div class="hero">
+  <div style="font-size:32px;margin-bottom:12px">📩</div>
+  <h1>יצירת קשר</h1>
+  <p>אנחנו כאן בשבילך — שאלה, בקשה, או סתם לשתף<br>אנחנו תמיד שמחות לשמוע ❤️</p>
+</div>
+
+<div class="contact-wrap">
+
+  <div class="contact-card" style="text-align:center">
+    <h2>דרכי התקשרות</h2>
+    <p style="font-size:15px;color:#555;margin-bottom:24px;line-height:1.7">יש שאלה? רוצה לדעת יותר? אנחנו כאן 💛<br>שלחי לנו הודעה בוואטסאפ ונחזור אליך בהקדם.</p>
+    <a href="https://wa.me/972554669221" target="_blank" style="
+      display:inline-flex;align-items:center;gap:12px;
+      background:#25D366;color:#fff;
+      font-size:16px;font-weight:700;
+      padding:16px 32px;border-radius:50px;
+      text-decoration:none;
+      box-shadow:0 4px 16px rgba(37,211,102,0.35);
+    ">
+      <span style="font-size:24px">💬</span>
+      שלחי הודעה בוואטסאפ
+    </a>
+    <div style="font-size:12px;color:#aaa;margin-top:14px">055-466-9221</div>
+  </div>
+
+  <div class="contact-card">
+    <h2>שעות מענה</h2>
+    <div class="hours-grid" style="grid-template-columns:1fr">
+      <div class="hour-box">
+        <div class="day">ראשון – חמישי</div>
+        <div class="time">10:00 – 18:00</div>
+      </div>
+    </div>
+  </div>
+
+
+</div>
+
+<footer>© 2026 LUNICA · כל הזכויות שמורות</footer>
+
+</body>
+</html>
