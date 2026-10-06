@@ -1,6 +1,14 @@
 <!DOCTYPE html>
 <html lang="he" dir="rtl">
 <head>
+<!-- Google Analytics GA4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-CH1RJ9JWBL"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-CH1RJ9JWBL');
+</script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>סבון כורכום לכתמים כהים | LUNIC</title>
@@ -1724,6 +1732,11 @@ var cartLabels = {
 var currentPrice = '₪249';
 
 function openCartModal(){
+  gtag('event', 'add_to_cart', {
+    currency: 'ILS',
+    value: parseFloat((currentPrice||'249').replace(/[^0-9.]/g,'')),
+    items: [{item_name: 'LUNICA Turmeric Soap', item_id: 'soap-turmeric', price: parseFloat((currentPrice||'249').replace(/[^0-9.]/g,''))}]
+  });
   var d = planData[currentPrice]||{};
   var l = cartLabels[currentPrice]||{};
   document.getElementById('cart-modal-name').textContent = l.name||'';
@@ -1741,6 +1754,11 @@ function closeCartModal(){
   document.body.style.overflow='';
 }
 function goToCheckout(){
+  gtag('event', 'begin_checkout', {
+    currency: 'ILS',
+    value: parseFloat((currentPrice||'249').replace(/[^0-9.]/g,'')),
+    items: [{item_name: 'LUNICA Turmeric Soap', item_id: 'soap-turmeric', price: parseFloat((currentPrice||'249').replace(/[^0-9.]/g,''))}]
+  });
   var link = checkoutLinks[currentPrice] || checkoutLinks['₪249'];
   window.location.href = link;
 }
